@@ -5,7 +5,7 @@
     src: local('Pragmatica ExtraLight Reg'), url(fonts/Pragmatica-ExtraLight.woff) format('woff');
 }
 
-body, h1, h1 p {
+body, h1, h1 p, #section1 h2, #section1 p, #name, #email, #cpf, #male, #fem, .radio {
     margin: 0
 }
 
@@ -31,7 +31,7 @@ nav {
     height: 0; 
     border-left: 1500px solid #FFF; 
     border-top: 120px solid transparent;
-    position: absolute
+    display: flex;
 } 
 
 h1 {
@@ -102,3 +102,105 @@ footer p {
     font-size: 12px;
     text-align: center;
 }
+
+.container{
+    display: flex;
+    margin: 0 290px;
+    width: 931px;
+    flex-wrap: wrap;
+}
+
+#section1 {
+    margin-top: 21px;
+    height: 273px;
+    width: 520px;
+    color: #888888;
+}
+
+#section1 h2 {
+    font-size: 20px;
+}
+
+#section1 p {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+#register {
+    margin-left: 60px;
+    margin-top: 21px;
+    height: 310px;
+    color: #888888;
+    font-size: 12px;
+}
+
+#name, #email, #cpf {
+    width: 340px;
+    height: 30px;
+    border: 1px solid #707070;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.radio {
+    height: 14px;
+    padding-left:5px;
+    font-size: 12px;
+}
+
+#male {
+    height: 14px;
+    width: 14px;
+    vertical-align: sub;
+}
+
+#fem {
+    margin-left: 40px;
+    height: 14px;
+    width: 14px;
+    vertical-align: sub;
+}
+
+#send {
+    width: 340px;
+    height: 39px;
+    margin-top: 23px;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
+    background: #FFF;
+}
+
+#products {
+    width: 931px;
+    height: 981px;
+    /*border: 1px solid #000;*/
+    align-items: flex-start;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 79px;
+    margin-bottom: 50px;
+}
+
+.title::before,
+.title::after {
+    content: '';
+    position: relative;
+    height: 1px; 
+    background: #888888; 
+    min-width: 150px; 
+    flex-grow: 1;
+}
+
+.title span{
+    color: #888; 
+    padding: 0 15px; /* distancia do texto às linhas */
+    font-weight: bold; /* negrito */
+    font-size: 18px; /* tamanho do texto */
+ }
