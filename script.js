@@ -1,9 +1,14 @@
-function menuToggle() {
-    let menuArea = document.getElementById("menu-area");
+let productsList = [];
 
-    if (menuArea.classList.contains('menu-opened') == true) {
-        menuArea.classList.remove('menu-opened');
-    } else {
-        menuArea.classList.add('menu-opened');
-    }
+async function loadProducts() {
+
+    const url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1';
+
+    const r = await fetch(url);
+    const json = await r.json();
+
+    productsList.push(json);
+
 }
+loadProducts();
+
