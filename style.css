@@ -5,7 +5,7 @@
     src: local('Pragmatica ExtraLight Reg'), url(fonts/Pragmatica-ExtraLight.woff) format('woff');
 }
 
-body, h1, h1 p, #section1 h2, #section1 p, #name, #email, #cpf, #male, #fem, .radio {
+body, h1, h1 p, #section1 h2, #section1 p, #name, #email, #cpf, #male, #fem, .radio, .product {
     margin: 0
 }
 
@@ -30,7 +30,7 @@ nav {
     width: 0; 
     height: 0; 
     border-left: 1500px solid #FFF; 
-    border-top: 120px solid transparent;
+    border-top: 117px solid transparent;
     display: flex;
 } 
 
@@ -75,7 +75,7 @@ button {
 }
 
 main {
-    height: 100%;
+    height: ;
 }
 
 footer {
@@ -124,12 +124,13 @@ footer p {
 #section1 p {
     margin-top: 30px;
     font-size: 12px;
+    line-height: 18px;
 }
 
 #register {
     margin-left: 60px;
     margin-top: 21px;
-    height: 310px;
+    height: 303px;
     color: #888888;
     font-size: 12px;
 }
@@ -173,10 +174,9 @@ footer p {
     background: #FFF;
 }
 
-#products {
+#showcase {
     width: 931px;
     height: 981px;
-    /*border: 1px solid #000;*/
     align-items: flex-start;
 }
 
@@ -200,7 +200,73 @@ footer p {
 
 .title span{
     color: #888; 
-    padding: 0 15px; /* distancia do texto às linhas */
-    font-weight: bold; /* negrito */
-    font-size: 18px; /* tamanho do texto */
- }
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 18px
+}
+
+.product {
+    width: 201px;
+    height: 350px;
+    font-family: 'Pragmatica ExtraLight Reg';
+    color:#888888;
+}
+
+.products-item--img {
+    height: 150px;
+    width: 200px;
+    border: 1px solid #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-item--name {
+    height: 16px;
+    width: 111px;
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.products-item--description {
+    height: 60px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.products-item--oldPrice {
+    height:14px;
+    width: 200px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.products-item--price {
+    height: 19px;
+    width: 200px;
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.products-item--installments {
+    height: 14px;
+    width: 200px;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#buy {
+    height: 30px;
+    width: 200px;
+    font-size: 16px;
+    margin-top: 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1
+}
