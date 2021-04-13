@@ -316,3 +316,65 @@ footer p {
     grid-row: 3;
 }
 
+#showMore {
+    margin-top: 52px;
+    margin-bottom: 49px;
+    margin-left: 334px;
+    width: 260px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
+}
+
+#newsletter {
+    width: 931px;
+    height: 389px;
+    font-family: 'Pragmatica ExtraLight Reg';
+    color:#888888;
+}
+
+#txt {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 39px;
+    text-align: center;
+}
+
+#newsletter label {
+    height: 14px;
+    font-size: 12px;
+}
+
+#friendName, #friendEmail {
+    width: 340px;
+    height: 30px;
+    border: 1px solid #707070;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.box-2 {
+    margin: 0 0 0 104px;
+    width: 770px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sendNow {
+    margin-top: 50px;
+    margin-bottom: 71px;
+    margin-left: 334px;
+    width: 260px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
+}
