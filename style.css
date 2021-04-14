@@ -30,7 +30,7 @@ nav {
     width: 0; 
     height: 0; 
     border-left: 1500px solid #FFF; 
-    border-top: 117px solid transparent;
+    border-top: 118px solid transparent;
     display: flex;
 } 
 
@@ -204,9 +204,9 @@ footer p {
     display: none;
 }
 
-.product {
+.product-item {
     width: 201px;
-    height: 350px;
+    height: 389px;
     font-family: 'Pragmatica ExtraLight Reg';
     color:#888888;
 }
@@ -222,7 +222,6 @@ footer p {
 
 .products-item--name {
     height: 16px;
-    width: 111px;
     margin-top: 14px;
     font-size: 14px;
 }
@@ -272,8 +271,8 @@ footer p {
 
 .grid-1 {
     display: grid;
-    grid-template-columns: 201px 41px 201px 41px 201px 41px 201px;
-    grid-template-rows: 350px 39px 350px;
+    grid-template-columns: 242px 242px 242px 201px;
+    grid-template-rows: 389px 389px;
 }
 
 .item-1 {
