@@ -74,6 +74,7 @@ button {
     border-radius: 4px;
     box-shadow: 0px 1px 6px #00000029;
     border: 1px solid #707070;
+    cursor:pointer;
 }
 
 main {
@@ -269,52 +270,13 @@ footer p {
     border: 1px solid #707070;
     border-radius: 4px;
     opacity: 1
+    cursor:pointer;
 }
 
 .grid-1 {
     display: grid;
     grid-template-columns: 242px 242px 242px 201px;
     grid-template-rows: 389px 389px;
-}
-
-.item-1 {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.item-2 {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.item-3 {
-    grid-column: 5;
-    grid-row: 1;
-}
-
-.item-4 {
-    grid-column: 7;
-    grid-row: 1;
-}
-
-.item-5 {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.item-6 {
-    grid-column: 3;
-    grid-row: 3;
-}
-
-.item-7 {
-    grid-column: 5;
-    grid-row: 3;
-}
-
-.item-8 {
-    grid-column: 7;
-    grid-row: 3;
 }
 
 #showMore {
@@ -328,6 +290,7 @@ footer p {
     border-radius: 4px;
     opacity: 1;
     font-size: 16px;
+    cursor:pointer;
 }
 
 #newsletter {

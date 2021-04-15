@@ -1,25 +1,28 @@
 const c = (el) => document.querySelector(el);
-const cs = (el) => document.querySelectorAll(el);
 
-let productsList = null;
-let products = null;
+let productsList = '';
+let products = '';
+let nextPage = '';
+let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
+let json1 = '';
 
 async function loadProducts() {
-    const url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1';
-    const r = await fetch(url);
-    const json = await r.json();
-    return json;
+    let r = await fetch(url);
+    json1 = await r.json();
+    return json1;
 }
 
-loadProducts().then(json => {
-    productsList = json;
+function listProducts() {
+loadProducts().then(json1 => {
+    productsList = json1;
     products = productsList.products;
+    nextPage = productsList.nextPage;
     fillProduct();
 });
+}
+listProducts(); 
 
 function fillProduct() {
-
-    /*console.log(products)*/
 
     products.map((item, index) => {
 
@@ -36,8 +39,12 @@ function fillProduct() {
         productItem.querySelector('.products-item--price').innerHTML = `Por: R$${item.price.toFixed(2)}`;
         productItem.querySelector('.products-item--installments').innerHTML = `ou ${item.installments.count}x de R$${item.installments.value.toFixed(2)}`;
 
+        //exibir produtos no grid
         c('.grid-1').append(productItem);
     });
 }
 
-
+c('#showMore').addEventListener('click', () => {
+    url = `https://${nextPage}`;
+    listProducts();
+});
