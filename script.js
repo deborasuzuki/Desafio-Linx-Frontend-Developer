@@ -5,6 +5,8 @@ let products = '';
 let nextPage = '';
 let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
 let json1 = '';
+let user = {};
+let usersList = [];
 
 async function loadProducts() {
     let r = await fetch(url);
@@ -48,3 +50,54 @@ c('#showMore').addEventListener('click', () => {
     url = `https://${nextPage}`;
     listProducts();
 });
+
+
+function check() {
+    let enterName = c("#name");
+    if (enterName.value == 0) {
+        alert("Informar nome");
+        name.focus();
+        return;
+    }
+
+    let enterEmail = c("#email");
+    if (enterEmail.value == 0 || enterEmail.value.indexOf('@') == -1 || enterEmail.value.indexOf('.') == -1) {
+        alert("Preencha e-mail corretamente");
+        email.focus();
+        return;
+    }
+
+    let enterCpf = c("#cpf");
+    if (enterCpf.value == 0 || enterCpf.value.length != 11) {
+        alert("CPF inválido");
+        cpf.focus();
+        return;
+    }
+
+    let genderEnter = 0;
+    function checkGender() {
+        const item = document.querySelectorAll("input[name^='gender']:checked");
+        if (item.length === 1) {
+            genderEnter = item[0].value;
+            return genderEnter;
+        }
+        alert('Informar Masculino / Feminino');
+        return false;
+    }
+    checkGender();
+
+
+    function usersData () {
+   
+        user = {
+            userName: c("#name").value,
+            userEmail: c("#email").value,
+            userCpf: c("#cpf").value,
+            userGender: genderEnter
+        }
+    }
+    usersData();
+
+    
+    console.log(user);
+}
