@@ -53,21 +53,27 @@ c('#showMore').addEventListener('click', () => {
 
 
 function check() {
-    let enterName = c("#name");
+
+    let = enterName = '';
+    let enterEmail = '';
+    let enterCpf = '';
+
+
+    enterName = c("#name");
     if (enterName.value == 0) {
         alert("Informar nome");
         name.focus();
         return;
     }
 
-    let enterEmail = c("#email");
+    enterEmail = c("#email");
     if (enterEmail.value == 0 || enterEmail.value.indexOf('@') == -1 || enterEmail.value.indexOf('.') == -1) {
         alert("Preencha e-mail corretamente");
         email.focus();
         return;
     }
 
-    let enterCpf = c("#cpf");
+    enterCpf = c("#cpf");
     if (enterCpf.value == 0 || enterCpf.value.length != 11) {
         alert("CPF inválido");
         cpf.focus();
@@ -76,7 +82,7 @@ function check() {
 
     let genderEnter = 0;
     function checkGender() {
-        const item = document.querySelectorAll("input[name^='gender']:checked");
+        const item = document.querySelectorAll("input[class^='gender']:checked");
         if (item.length === 1) {
             genderEnter = item[0].value;
             return genderEnter;
@@ -98,6 +104,10 @@ function check() {
     }
     usersData();
 
-    
-    console.log(user);
+    usersList.push(user);
+
+    console.log(usersList);
+
 }
+
+
