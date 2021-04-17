@@ -32,7 +32,7 @@
                 <p>Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
             </section>
 
-            <section id="register">
+            <form id="register">
                 <label>Seu nome:<br><input id="name" type="text" value="" name="form" /></label><br>
                 <label>E-mail:<br><input id="email" type="email" value="" name="form" /></label><br>
                 <label>CPF:<br><input id="cpf" type="text" value="" name="form" placeholder=""/></label><br>
@@ -40,8 +40,8 @@
                 <input class="gender" id="male" type="radio" value="male" name="form" /><label class="radio">Masculino</label>
                 <input class="gender" id="fem" type="radio" value="female" name="form"/><label class="radio">Feminino</label><br>
 
-                <button id="send" onclick="check()">Enviar</button>
-            </section>
+                <button id="send" onclick="check(event)">Enviar</button>
+            </form>
            
         <section id="showcase">
             <h2 class="title">

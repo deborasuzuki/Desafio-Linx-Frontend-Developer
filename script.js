@@ -52,7 +52,11 @@ c('#showMore').addEventListener('click', () => {
 });
 
 
-function check() {
+function check(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    console.log('treta');
 
     let = enterName = '';
     let enterEmail = '';
@@ -62,7 +66,6 @@ function check() {
     enterName = c("#name");
     if (enterName.value == 0) {
         alert("Informar nome");
-        name.focus();
         return;
     }
 
@@ -92,7 +95,6 @@ function check() {
     }
     checkGender();
 
-
     function usersData () {
    
         user = {
@@ -101,13 +103,31 @@ function check() {
             userCpf: c("#cpf").value,
             userGender: genderEnter
         }
-    }
-    usersData();
 
+        return user;
+    }
+
+    user = usersData();
     usersList.push(user);
 
-    console.log(usersList);
+    clearData();
 
 }
 
+function clearData () {
+    /*c("#name").value = '';
+    c("#email").value = '';
+    c("#cpf").value = '';
 
+    let gender = c(".gender");
+    for (let i = 0; i < gender.length; i++) {
+        gender[i].cheked = false;
+    }*/
+
+   document.querySelector("form").reset();
+
+    return;
+}
+
+
+console.log(usersList);
