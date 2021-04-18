@@ -1,30 +1,26 @@
 const c = (el) => document.querySelector(el);
 
-let productsList = '';
-let products = '';
 let nextPage = '';
 let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
-let json1 = '';
-let user = {};
 let usersList = [];
 
-async function loadProducts() {
-    let r = await fetch(url);
-    json1 = await r.json();
+async function loadProducts(url_json) {
+    let r = await fetch(url_json);
+    let json1 = await r.json();
     return json1;
 }
 
-function listProducts() {
-loadProducts().then(json1 => {
-    productsList = json1;
-    products = productsList.products;
-    nextPage = productsList.nextPage;
-    fillProduct();
-});
+function listProducts(url) {
+    loadProducts(url).then(json1 => {
+        let productsList = json1;
+        let products = productsList.products;
+        nextPage = productsList.nextPage;
+        fillProduct(products);
+    });
 }
-listProducts(); 
+listProducts(url); 
 
-function fillProduct() {
+function fillProduct(products) {
 
     products.map((item, index) => {
 
@@ -48,86 +44,65 @@ function fillProduct() {
 
 c('#showMore').addEventListener('click', () => {
     url = `https://${nextPage}`;
-    listProducts();
+    listProducts(url);
 });
 
 
-function check(e) {
-    e.preventDefault();
-    e.stopPropagation();
+function check(event) {
+    // não recarregar após envio do form
+    event.preventDefault();
+    event.stopPropagation();
+   
+    //valida form completo
+    if (!validateForm()) {
+        return;
+    }
 
-    console.log('treta');
+    //armazena dados do form
+    let user = {
+        userName: c("#name").value,
+        userEmail: c("#email").value,
+        userCpf: c("#cpf").value,
+        userGender: document.querySelectorAll("input[class^='gender']:checked")[0].value
+    };
+    usersList.push(user);
 
-    let = enterName = '';
-    let enterEmail = '';
-    let enterCpf = '';
+    //limpa form
+    document.querySelector("form").reset();
+    console.log(usersList);
+}
 
 
-    enterName = c("#name");
+function validateForm() {
+    let enterName = c("#name");
     if (enterName.value == 0) {
         alert("Informar nome");
-        return;
+        enterName.focus();
+        return false;
     }
 
-    enterEmail = c("#email");
+    let enterEmail = c("#email");
     if (enterEmail.value == 0 || enterEmail.value.indexOf('@') == -1 || enterEmail.value.indexOf('.') == -1) {
         alert("Preencha e-mail corretamente");
-        email.focus();
-        return;
+        enterEmail.focus();
+        return false;
     }
 
-    enterCpf = c("#cpf");
+    let enterCpf = c("#cpf");
     if (enterCpf.value == 0 || enterCpf.value.length != 11) {
         alert("CPF inválido");
-        cpf.focus();
-        return;
+        enterCpf.focus();
+        return false;
     }
 
     let genderEnter = 0;
-    function checkGender() {
-        const item = document.querySelectorAll("input[class^='gender']:checked");
-        if (item.length === 1) {
-            genderEnter = item[0].value;
-            return genderEnter;
-        }
+    const gender = document.querySelectorAll("input[class^='gender']:checked");
+    if (gender.length === 0) {
         alert('Informar Masculino / Feminino');
         return false;
     }
-    checkGender();
 
-    function usersData () {
-   
-        user = {
-            userName: c("#name").value,
-            userEmail: c("#email").value,
-            userCpf: c("#cpf").value,
-            userGender: genderEnter
-        }
+    genderEnter = gender[0].value;
 
-        return user;
-    }
-
-    user = usersData();
-    usersList.push(user);
-
-    clearData();
-
+    return true;
 }
-
-function clearData () {
-    /*c("#name").value = '';
-    c("#email").value = '';
-    c("#cpf").value = '';
-
-    let gender = c(".gender");
-    for (let i = 0; i < gender.length; i++) {
-        gender[i].cheked = false;
-    }*/
-
-   document.querySelector("form").reset();
-
-    return;
-}
-
-
-console.log(usersList);
