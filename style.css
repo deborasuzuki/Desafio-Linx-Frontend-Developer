@@ -5,7 +5,7 @@
     src: local('Pragmatica ExtraLight Reg'), url(fonts/Pragmatica-ExtraLight.woff) format('woff');
 }
 
-body, h1, h1 p, #section1 h2, #section1 p, #name, #email, #cpf, #male, #fem, .radio, .product {
+body, h1, h1 p, #section1 h2, #section1 p, #name, #email, #cpf, #male, #fem, .radio, .product, #email-header {
     margin: 0
 }
 
@@ -342,3 +342,131 @@ footer p {
     opacity: 1;
     font-size: 16px;
 }
+
+#email-header {
+    top: 0px;
+    left: 0px;
+    width: 600px;
+    height: 198px;
+    background: #707070 0% 0% no-repeat padding-box;
+    opacity: 1;
+    display:flex;
+    flex-direction: column;
+}
+
+
+#cut-email-header { 
+    width: 0; 
+    height: 0; 
+    border-left: 600px solid #FFF; 
+    border-top: 40px solid transparent;
+    align-items: flex-end;
+} 
+
+#email-header h1 {
+    padding-top: 31px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+#email-header h1 span {
+    padding-top: 59px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#email-header h1 p {
+    padding: 9px 0 6px 120px;
+    font-weight: 300;
+    font-size: 14px;
+    width: 360px;
+    justify-content: center;
+}
+
+#email-footer {
+    top: 0px;
+    left: 0px;
+    width: 600px;
+    height: 158px;
+    background: #707070 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+#email-cutfooter { 
+    width: 0; 
+    height: 0; 
+    border-left: 600px solid #FFF; 
+    border-bottom: 40px solid transparent;
+    position: absolute
+} 
+
+#email-footer p {
+    margin: 0;
+    padding-top: 79px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+}
+
+#email-main {
+    font-family: 'Pragmatica ExtraLight Reg';
+    margin: 6px 0 0 21px;
+    height: 617px;
+    width: 563px;
+    color: #888888;
+}
+
+#email-main h2 {
+   font-size: 20px;
+}
+
+#email-main p {
+    margin-top: 9px;
+    height: 60px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.grid-2 {
+    width: 443px;
+    margin: 0 80px 0 59px;
+    display: grid;
+    grid-template-columns: 242px 201px;
+    grid-template-rows: 350px;
+}
+
+#email-showMore {
+    margin-top: 62px;
+    margin-bottom: 50px;
+    margin-left: 90px;
+    width: 383px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+#email-showcase
+{
+    height: 355px;
+    width: 443px;
+}
+
+#email-buy {
+    height: 30px;
+    width: 200px;
+    font-size: 16px;
+    margin-top: 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1
+    cursor:pointer;
+}
+
