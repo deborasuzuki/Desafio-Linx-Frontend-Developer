@@ -154,6 +154,7 @@ footer p {
 }
 
 #male {
+    padding-right: 5px;
     height: 14px;
     width: 14px;
     vertical-align: sub;
@@ -353,7 +354,6 @@ footer p {
     display:flex;
     flex-direction: column;
 }
-
 
 #cut-email-header { 
     width: 0; 
