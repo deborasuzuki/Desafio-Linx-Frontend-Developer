@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <title>E-mail | Desafio Linx | Frontend Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header id="email-header">
+            <h1>
+                uma seleção de produtos
+                <br>
+                <span>especial para você</span>
+                <p>Todos os produtos desta lista foram selecionados a partir da sua nagevação. Aproveite!</p>
+            </h1>
+            <div id="cut-email-header"></div>
+        </header>
+        <main id="email-main">
+            <h2>
+                Olá, Fulano
+            </h2>
+            <p>
+                Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos que você pode gostar. 
+                Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:
+            </p>
+            <section id="email-showcase">
+                <div class="models">
+                    <div class="product-item">
+                        <div class="products-item--img"><img src="" /></div>
+                        <div class="products-item--name">Nome do produto</div>
+                        <div class="products-item--description">Product long description number 0 just to make more than one like of text.</div>
+                        <div class="products-item--oldPrice">De: R$ </div>
+                        <div class="products-item--price">Por: R$ </div>
+                        <div class="products-item--installments">ou x de R$</div>
+                        <button id="email-buy">Comprar</button>
+                    </div>
+                </div>
+    
+                <div class="grid-2">
+                    <!-- área de preenchimento dos produtos -->
+                </div>
+
+                <button id="email-showMore">Tem muito mais aqui. Vem ver!</button>
+            </section>
+        </main>
+        <footer id="email-footer">
+            <span id="email-cutfooter"></span>
+            <p>
+                Testando suas habilidades em HTML, CSS e JS.<br>
+                Linx Impulse<br>
+                2019
+            </p>
+        </footer>
+
+        <script src="email-script.js"></script>
+    </body>
+</html>
