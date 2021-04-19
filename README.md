@@ -22,7 +22,7 @@ https://deborasuzuki.github.io/Desafio-Linx-Frontend-Developer/
 
 
 
-![desafio-landing](C:\Users\debor\OneDrive\Área de Trabalho\ProgramasJS\desafio-linx\desafio-landing.png)
+![desafio-landing](https://github.com/deborasuzuki/Desafio-Linx-Frontend-Developer/blob/main/desafio-landing.png)
 
 
 
