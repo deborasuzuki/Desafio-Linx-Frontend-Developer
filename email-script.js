@@ -1,4 +1,5 @@
 const c = (el) => document.querySelector(el);
+const cs = (el) => document.querySelectorAll(el);
 
 let nextPage = '';
 let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
@@ -55,7 +56,7 @@ c('#email-showMore').addEventListener('click', () => {
     window.location = "index.html";
 });
 
-c('#email-buy').addEventListener('click', () => {
+//comando botão comprar
+function buy() {
     window.location = "index.html";
-});
-
+}
