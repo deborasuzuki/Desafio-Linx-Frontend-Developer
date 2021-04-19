@@ -1,0 +1,344 @@
+@font-face {
+    font-family: 'Pragmatica ExtraLight Reg';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Pragmatica ExtraLight Reg'), url(fonts/Pragmatica-ExtraLight.woff) format('woff');
+}
+
+body, h1, h1 p, #section1 h2, #section1 p, #name, #email, #cpf, #male, #fem, .radio, .product, #email-header {
+    margin: 0
+}
+
+body {
+    margin: 0;
+    background-color: #FFF;
+    font-family: 'Pragmatica ExtraLight Reg';
+    height: 2521px;
+    width: 420px;
+}
+
+nav {
+    top: 0px;
+    left: 0px;
+    width: 420px;
+    height: 398px;
+    background: #707070 0% 0% no-repeat padding-box;
+    background-image: url("images/bg-mobile.png");
+    opacity: 1;
+    display:flex;
+    flex-direction: column;
+}
+
+h1 {
+    width: 359px;
+    height: 100px;
+    padding-top: 66px;
+    padding-left: 16px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: left;
+    
+}
+
+h1 span {
+    padding-top: -5px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+h1 p {
+    padding-bottom: 95px;
+    padding-top: 9px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.box {
+    margin: 0 0 0 20px;
+    padding-top: 56px;
+    width: 420px;
+    height: 111px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button {
+    z-index: 99;
+    margin: 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    font-family: 'Pragmatica ExtraLight Reg';
+    color:#888888;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px #00000029;
+    border: 1px solid #707070;
+    cursor:pointer;
+}
+
+main {
+    height: ;
+}
+
+footer {
+    top: 0px;
+    left: 0px;
+    width: 420px;
+    height: 157px;
+    background: #707070 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+#cutfooter { 
+    width: 0; 
+    height: 0; 
+    border-left: 420px solid #FFF; 
+    border-bottom: 40px solid transparent;
+    position: absolute
+} 
+
+footer p {
+    padding-top: 71px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    margin: 0 16px;
+    width: 386px;
+    display: inline-block;
+    
+}
+
+#section1 {
+    margin-top: 19px;
+    height:auto px;
+    width: 386px;
+    color: #888888;
+}
+
+#section1 h2 {
+    font-size: 20px;
+}
+
+#section1 p {
+    margin-top: 17px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#register {
+    margin-left: 0px;
+    margin-top: 30px;
+    height: 303px;
+    color: #888888;
+    font-size: 12px;
+}
+
+#name, #email, #cpf {
+    width: 383px;
+    height: 30px;
+    border: 1px solid #707070;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.radio {
+    height: 14px;
+    padding-left:5px;
+    font-size: 12px;
+}
+
+#male {
+    padding-right: 5px;
+    height: 14px;
+    width: 14px;
+    vertical-align: sub;
+}
+
+#fem {
+    margin-left: 40px;
+    height: 14px;
+    width: 14px;
+    vertical-align: sub;
+}
+
+#send {
+    width: 383px;
+    height: 39px;
+    margin: 20px 0 0 0;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
+    background: #FFF;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 83px;
+    margin-bottom: 23px;
+    width: 100%;
+}
+
+.title::before,
+.title::after {
+    content: '';
+    position: relative;
+    height: 1px; 
+    background: #888888; 
+    min-width: 50px; 
+    flex-grow: 1;
+}
+
+.title span{
+    color: #888; 
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 18px
+}
+
+.models {
+    display: none;
+}
+
+.product-item {
+    width: 392px;
+    height: 169px;
+    font-family: 'Pragmatica ExtraLight Reg';
+    color:#888888;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.products-item--img {
+    height: 139px;
+    width: 169px;
+    border: 1px solid #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.products-item--name {
+    height: 16px;
+    margin: 0px 0 0 23px;
+    font-size: 14px;
+}
+
+.products-item--oldPrice {
+    margin: 13px 0 0 23px;
+    height:14px;
+    width: 200px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.products-item--price {
+    height: 19px;
+    width: 200px;
+    margin: 6px 0 0 23px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.products-item--installments {
+    height: 14px;
+    width: 200px;
+    margin: 6px 0 0 23px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#buy {
+    height: 30px;
+    width: 200px;
+    font-size: 16px;
+    margin: 20px 0 0 23px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1
+    cursor: pointer;
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: 392px;
+    grid-template-rows: 159px 159px 159px 144px;
+}
+
+#showMore {
+    margin-top: 38px;
+    margin-bottom: 38px;
+    margin-left: 80px;
+    width: 260px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+#newsletter {
+    width: 386px;
+    height: auto px;
+    font-family: 'Pragmatica ExtraLight Reg';
+    color:#888888;
+}
+
+#txt {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+#newsletter label {
+    height: 21px;
+    font-size: 12px;
+}
+
+#friendName, #friendEmail {
+    width: 391px;
+    height: 30px;
+    border: 1px solid #707070;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.box-2 {
+    margin: 0 0 0 9px;
+    width: 392px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#sendNow {
+    margin-top: 22px;
+    margin-bottom: 71px;
+    margin-left: 80px;
+    width: 260px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
+}
