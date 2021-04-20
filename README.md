@@ -2,8 +2,6 @@
 
 ------
 
-Desenvolvimento de desefio proposta pela Linx para Frontend Developer.
-
 O desafio consiste no desenvolvimento do *layout* de uma *landing page* com uma grade de produtos e um formulário de *newsletter*. O principal objetivo é transformar este *layout* em uma página funcional.
 
 https://github.com/chaordic/frontend-developer-challenge 
@@ -19,6 +17,8 @@ HTML, CSS e JavaScript Vanilla.
 ------
 
 https://deborasuzuki.github.io/Desafio-Linx-Frontend-Developer/
+
+
 
 
 
