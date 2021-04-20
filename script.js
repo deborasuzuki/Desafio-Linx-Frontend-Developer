@@ -1,6 +1,21 @@
 const c = (el) => document.querySelector(el);
 const cs = (el) => document.querySelectorAll(el);
 
+//identificar desktop ou mobile
+let isMobile = false;
+if (window.innerWidth <= 780) {
+    isMobile = true;
+}
+if (window.location.pathname.indexOf('index-mobile') === -1) {
+    if (isMobile) {
+        window.location = 'index-mobile.html';
+    }
+} else {
+    if (!isMobile) {
+        window.location = 'index.html';
+    }
+}
+
 let nextPage = '';
 let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
 let usersList = [];
@@ -19,12 +34,16 @@ function listProducts(url) {
         let productsList = json1;
         let products = productsList.products;
         nextPage = productsList.nextPage;
-        fillProduct(products);
+        if (isMobile == false) {
+            fillProduct(products);
+        } else {
+            fillProductMobile(products);
+        }
     });
 }
 listProducts(url); 
 
-//preenche dados do produto 
+//preenche dados do produto dsktop
 function fillProduct(products) {
 
     products.map((item, index) => {
@@ -38,6 +57,34 @@ function fillProduct(products) {
         productItem.querySelector('.products-item--img img').src = item.image;
         productItem.querySelector('.products-item--name').innerHTML = item.name;
         productItem.querySelector('.products-item--description').innerHTML = item.description;
+        productItem.querySelector('.products-item--oldPrice').innerHTML = `De: R$${item.oldPrice.toFixed(2)}`;
+        productItem.querySelector('.products-item--price').innerHTML = `Por: R$${item.price.toFixed(2)}`;
+        productItem.querySelector('.products-item--installments').innerHTML = `ou ${item.installments.count}x de R$${item.installments.value.toFixed(2)}`;
+
+        //exibir produtos no grid
+        c('.grid-1').append(productItem);
+
+
+    });
+}
+
+//preenche dados do produto mobile
+function fillProductMobile(products) {
+  
+    products.map((item, index) => {
+
+        if (index > 3) {
+            return;
+        }
+   
+        let productItem = c('.models .product-item').cloneNode(true);
+
+        //identificar produto
+        productItem.setAttribute('data-key', index);
+
+        //preencher as informações em productItem
+        productItem.querySelector('.products-item--img img').src = item.image;
+        productItem.querySelector('.products-item--name').innerHTML = item.name;
         productItem.querySelector('.products-item--oldPrice').innerHTML = `De: R$${item.oldPrice.toFixed(2)}`;
         productItem.querySelector('.products-item--price').innerHTML = `Por: R$${item.price.toFixed(2)}`;
         productItem.querySelector('.products-item--installments').innerHTML = `ou ${item.installments.count}x de R$${item.installments.value.toFixed(2)}`;

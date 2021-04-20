@@ -10,7 +10,6 @@ body, h1, h1 p, #section1 h2, #section1 p, #name, #email, #cpf, #male, #fem, .ra
 }
 
 body {
-    margin: 0;
     background-color: #FFF;
     font-family: 'Pragmatica ExtraLight Reg';
     height: 2521px;
@@ -18,8 +17,6 @@ body {
 }
 
 nav {
-    top: 0px;
-    left: 0px;
     width: 420px;
     height: 398px;
     background: #707070 0% 0% no-repeat padding-box;
@@ -276,7 +273,7 @@ footer p {
 .grid-1 {
     display: grid;
     grid-template-columns: 392px;
-    grid-template-rows: 159px 159px 159px 144px;
+    grid-template-rows: 159px 159px 159px 159px;
 }
 
 #showMore {
@@ -314,7 +311,7 @@ footer p {
 }
 
 #friendName, #friendEmail {
-    width: 391px;
+    width: 380px;
     height: 30px;
     border: 1px solid #707070;
     margin-top: 7px;
@@ -323,7 +320,7 @@ footer p {
 }
 
 .box-2 {
-    margin: 0 0 0 9px;
+    margin: 0;
     width: 392px;
     height: auto;
     flex-wrap: wrap;
@@ -333,7 +330,7 @@ footer p {
 #sendNow {
     margin-top: 22px;
     margin-bottom: 71px;
-    margin-left: 80px;
+    margin-left: 64px;
     width: 260px;
     height: 39px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
